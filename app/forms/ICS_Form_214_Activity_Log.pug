@@ -1,0 +1,148 @@
+style
+    include ../resources/grid12.css
+
+style.
+
+    p {
+        font-size: 0.8em;
+        margin: 2px;
+    }
+
+    body {
+        padding: 50px;
+    }
+
+    .border {
+        border: 1px solid black;
+    }
+
+mixin title
+    .text-center
+        h3 ACTIVITY LOG (ICS 214)
+
+mixin header
+    .row.border
+        .col-sm-4
+            p 1. Incident Name:
+            p=Incident_Name
+        .col-sm-2
+            p 2. Operational Period:
+            br
+        .col-sm-3
+            p Date From:
+                span=Operational_Period.date_from
+            p Date To:
+                span=Operational_Period.date_to
+        .col-sm-3
+            p Time From:
+                span=Operational_Period.time_from
+            p Time To:
+                span=Operational_Period.time_to
+
+mixin footer(page)
+    .row.border
+        .row
+            .col-sm-3
+                p 8. Prepared by:
+            .col-sm-3
+                p Name:
+                    span= Prepared_By.name
+            .col-sm-3
+                p Position/Title:
+                    span= Prepared_By.position_title
+            .col-sm-3
+                p Signature:
+                    span= Prepared_By.signature
+        .row
+            .col-sm-3
+            .col-sm-9
+                p Date/Time:
+                    span= Prepared_By.date_time
+
+mixin activityLog(start, end)
+    .row.border
+        .col-sm-12
+            p 7. Activity Log:
+            table(style='width:100%')
+                tr
+                    th(style="width: 20%") Date/Time
+                    th(style="width: 80%") Notable Activities
+                - var i = start;
+                while i < end
+                    tr
+                    td(style="width: 20%")=Activity_Log[i] ? Activity_Log[i].date_time : ' '
+                    td(style="width: 80%")=Activity_Log[i] ? Activity_Log[i].notable_activities : ' '
+                    - i++;
+
+//Page 1
++title
++header
+.row.border
+    .col-sm-4.border
+        p 3. Name:
+        p=Name
+    .col-sm-4.border
+        p 4. ICS Position:
+        p=ICS_Position
+    .col-sm-4.border
+        p 5. Home Agency (and Unit):
+        p=Home_Agency
+.row.border
+    .col-sm-12.border
+        p 6. Resources Assigned:
+        table(style='width:100%')#resourcesAssigned
+            tr
+                th(style="width: 33%") Name
+                th(style="width: 33%") ICS Position
+                th(style="width: 33%") Home Agency (and Unit)
+            - var i = 0;
+            while i < 8
+                tr
+                td(style="width: 33%")=Resources_Assigned[i]?Resources_Assigned[i].name:' '
+                td(style="width: 33%")=Resources_Assigned[i]?Resources_Assigned[i].ics_position:' '
+                td(style="width: 33%")=Resources_Assigned[i]?Resources_Assigned[i].home_agency:' '
+                - i++;
++activityLog(0, 24)
++footer(1)
+hr
+
+// Page 2
++title
++header
++activityLog(24, 50)
++footer(2)
+hr
+
+// Page 3
+h6 ICS 214
+h6 Activity Log
+
+p
+    strong Purpose.&nbsp
+    span.
+        The Activity Log (ICS 214) records details of notable activities at any ICS level, including single resources,
+        equipment, Task Forces, etc. These logs provide basic incident activity documentation, and a reference for any afteraction
+        report.
+
+p
+    strong Preparation.&nbsp
+    span.
+        An ICS 214 can be initiated and maintained by personnel in various ICS positions as it is needed or
+        appropriate. Personnel should document how relevant incident activities are occurring and progressing, or any notable
+        events or communications.
+
+p
+    strong Distribution.&nbsp
+    span.
+        Completed ICS 214s are submitted to supervisors, who forward them to the Documentation Unit. All
+        completed original forms must be given to the Documentation Unit, which maintains a file of all ICS 214s. It is
+        recommended that individuals retain a copy for their own records.
+
+p
+    strong Notes:
+    ul
+        li The ICS 214 can be printed as a two-sided form.
+        li Use additional copies as continuation sheets as needed, and indicate pagination as used.
+
+
+

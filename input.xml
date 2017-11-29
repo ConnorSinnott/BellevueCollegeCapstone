@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ics214>
+    <incident_name>My Incident Name</incident_name>
+    <operational_period>
+        <date_from>Oct 24</date_from>
+        <date_to>Oct 28</date_to>
+        <time_from>13:23</time_from>
+        <time_to>14:22</time_to>
+    </operational_period>
+    <name>Connor Sinnott</name>
+    <ics_position>None</ics_position>
+    <home_agency>Bellevue</home_agency>
+    <resources_assigned>
+        <resources_assigned_entry>
+            <name>Test1</name>
+            <ics_position>None</ics_position>
+            <home_agency>Bellevue</home_agency>
+        </resources_assigned_entry>
+        <resources_assigned_entry>
+            <name>Test2</name>
+            <ics_position>None</ics_position>
+            <home_agency>Seattle</home_agency>
+        </resources_assigned_entry>
+    </resources_assigned>
+    <activity_log>
+        <activity_log_entry>
+            <date_time>Oct 30</date_time>
+            <notable_activities>Day Before Halloween</notable_activities>
+        </activity_log_entry>
+        <activity_log_entry>
+            <date_time>Oct 31</date_time>
+            <notable_activities>Halloween</notable_activities>
+        </activity_log_entry>
+        <activity_log_entry>
+            <date_time>Oct 30</date_time>
+            <notable_activities>1111111111111111111111</notable_activities>
+        </activity_log_entry>
+        <activity_log_entry>
+            <date_time>Oct 31</date_time>
+            <notable_activities>22222222222222222222222</notable_activities>
+        </activity_log_entry>
+    </activity_log>
+    <prepared_by>
+        <name>Connor</name>
+        <position_title>Programmer</position_title>
+        <signature>Connor Sinnott</signature>
+        <date_time>Nov 28</date_time>
+    </prepared_by>
+</ics214>

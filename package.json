@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./app/app.js -e .pug,.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ConnorSinnott/BellevueCollegeCapstone/issues"
   },
-  "homepage": "https://github.com/ConnorSinnott/BellevueCollegeCapstone#readme"
+  "homepage": "https://github.com/ConnorSinnott/BellevueCollegeCapstone#readme",
+  "dependencies": {
+    "pug": "^2.0.0-rc.4",
+    "xml-parser": "^1.2.1"
+  }
 }
